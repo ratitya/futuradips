@@ -1,0 +1,480 @@
+/* CSS dari beranda.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(28, 109, 190, 0.8); /* Transparansi */
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+nav {
+    display: flex;
+    justify-content: right;
+    background-color: #0458ac;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    position: relative;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown menu styling */
+nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparansi */
+    color: #002244;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0.5rem 0;
+    z-index: 100;
+    min-width: 220px; /* Lebar minimal agar rapi */
+}
+
+nav .dropdown-menu li {
+    padding: 2px;
+    text-align: left; /* Sejajarkan teks ke kiri */
+}
+
+nav .dropdown-menu li a {
+    color: #002244;
+    text-decoration: none;
+    font-weight: normal; /* Tidak terlalu tebal */
+}
+
+nav .dropdown-menu li a:hover {
+    color: #FFD700; 
+    text-decoration: underline;
+}
+
+.hero {
+position: relative;
+height: 800px;
+width: 100%;
+overflow: hidden;
+}
+
+.carousel {
+position: relative;
+height: 100%;
+width: 100%;
+}
+
+.slide {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+opacity: 0;
+transition: opacity 3s ease-in-out;
+}
+
+.slide.active {
+opacity: 1; /* Hanya gambar aktif yang terlihat */
+}
+
+.slide img {
+width: 100%;
+height: 100%;
+object-fit: cover; /* Agar gambar memenuhi area hero */
+}
+
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 51, 0.6);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+z-index: 1;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.highlight {
+    background-color: #FFD700;
+    color: #002244;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.content {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content p {
+    color: black;
+}
+
+.contact-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-box {
+    flex: 1;
+    background-color: #0458ac;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-box img {
+    width: 60px; /* Ukuran lebih kecil */
+    margin-right: 1rem; /* Jarak antara gambar dan teks */
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-info h3 {
+    color: #FFD700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+    margin: 0.3rem 0;
+    font-size: 1rem;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+.footer {
+background-color: #003f87; /* Warna biru ITS */
+color: white;
+padding: 20px 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.footer-container {
+display: flex;
+align-items: center;
+gap: 20px; /* Jarak antara logo dan teks */
+}
+
+.footer-logo img {
+width: 100px;
+border-radius: 50%;
+}
+
+.footer-contact {
+font-size: 15px;
+line-height: 1.6;
+}
+
+.footer-contact a {
+color: white;
+text-decoration: underline;
+}
+
+.footer-social {
+text-align: center;
+}
+
+.footer-social p {
+font-size: 14px;
+margin-bottom: 10px;
+}
+
+.social-icons a img {
+width: 25px;
+height: 25px;
+margin: 0 5px;
+transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+transform: scale(1.2);
+}
+
+.footer-divider {
+border-left: 2px solid white;
+height: 80px;
+margin: 0 auto;
+}
+
+.footer-its {
+text-align: center;
+}
+
+.footer-its p {
+font-size: 14px;
+margin-bottom: 10px;
+}
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Membuat logo berbentuk lingkaran */
+    margin-right: 10px;
+    border: 2px solid white; /* Memberikan border putih */
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: right;
+    background-color:rgb(187, 193, 15); /* Transparansi */
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+ /* Dropdown menu styling dengan animasi transisi */
+nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparansi */
+    color: #002244;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0.5rem 0;
+    z-index: 100;
+    min-width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+ .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    position: relative;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+nav .dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+nav .dropdown-menu li a:hover {
+    color: #FFD700;
+    text-decoration: underline;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 0.5rem 0;
+    }
+}
+
+/* CSS dari berita.css */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.highlight {
+    background-color: #FFD700;
+    color: #002244;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.news-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.news-card:hover {
+    transform: scale(1.05);
+}
+
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-card-content {
+    padding: 1rem;
+}
+
+.news-card-content h3 {
+    font-size: 1.2rem;
+    color: #003366;
+    margin-bottom: 0.5rem;
+}
+
+.news-card-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.news-card-content a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #003366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.news-card-content a:hover {
+    background-color: #00509e;
+}
+
+footer {
+    background-color:#1c6dbe;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+.button {
+    color: red; /* Warna teks */
+    text-decoration: none; /* Hilangkan garis bawah */
+    font-weight: bold; /* Cetak tebal */
+    padding: 10px 20px; /* Tambahkan padding */
+    border: 2px solid red; /* Tambahkan border */
+    border-radius: 5px; /* Berikan border melengkung */
+    background-color: yellow; /* Warna latar belakang */
+    display: inline-block; /* Buat tampil sebagai tombol */
+    transition: 0.3s; /* Animasi efek hover */
+}
+
+/* Hover effect untuk tombol */
+.button:hover {
+    color: white; /* Warna teks berubah saat hover */
+    background-color: red; /* Warna latar berubah saat hover */
+    border-color: yellow; /* Warna border berubah */
+}
